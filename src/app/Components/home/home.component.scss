@@ -1,0 +1,111 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ECEFF4;
+    font-size: 20px;
+}
+
+.mainContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#username {
+    color: #5882C5;
+    font-weight: 600;
+}
+
+#userInfo {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0;
+    max-width: 90%;
+    text-align: center;
+}
+
+#Profile {
+    position: relative;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    background-image: url(Assets/Profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1%;
+}
+
+.icons {
+    margin: 1.5em 0;
+    font-size: 1em;
+}
+
+.iconGroup {
+    margin: 10% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo {
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.contactIcon {
+    width: 2em;
+    height: 2em;
+    border-radius: 0.5em;
+    margin: 2% 0;
+    margin-right: 0.5em;
+}
+
+.moreInfo {
+    display: none;
+}
+
+.dropdown:focus-within .moreInfo {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.moreButton {
+    all: unset;
+    display: flex;
+    align-items: center;
+}
+
+.resume {
+    margin: 2em 0;
+}
+
+#saveButton {
+    background-color: #5882C5;
+    color: #FFFF;
+    border: none;
+    border-radius: 0.5em;
+    width: 312px;
+    height: 2em;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    #Profile {
+        width: 100px;
+        height: 100px;
+    }
+
+    #saveButton {
+        width: 156px;
+    }
+}
