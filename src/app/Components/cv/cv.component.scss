@@ -10,3 +10,6 @@ a {
     text-decoration: none;
     color: #5882C5;
 }
+table td:first-child {
+    vertical-align: baseline;
+}
