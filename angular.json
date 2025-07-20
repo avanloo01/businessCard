@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "businessCard:build:production"
+              "buildTarget": "businessCard:build:production"
             },
             "development": {
-              "browserTarget": "businessCard:build:development"
+              "buildTarget": "businessCard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "businessCard:build"
+            "buildTarget": "businessCard:build"
           }
         },
         "test": {
