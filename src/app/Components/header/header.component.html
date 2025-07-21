@@ -1,0 +1,48 @@
+<header class="site-header">
+  <div class="header-container">
+    <!-- Logo/Brand -->
+    <div class="brand">
+      
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-links desktop-nav">
+      <a routerLink="/" 
+         class="nav-link" 
+         [class.active]="isActiveRoute('/')"
+         (click)="closeMenu()">Home</a>
+      <a routerLink="/cv" 
+         class="nav-link" 
+         [class.active]="isActiveRoute('/cv')"
+         (click)="closeMenu()">CV</a>
+      <a routerLink="/blog" 
+         class="nav-link" 
+         [class.active]="isActiveRoute('/blog')"
+         (click)="closeMenu()">Blog</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-button" 
+            (click)="toggleMenu()" 
+            aria-label="Toggle menu">
+      <i class="material-icons" *ngIf="!isMenuOpen">menu</i>
+      <i class="material-icons" *ngIf="isMenuOpen">close</i>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" [class.open]="isMenuOpen">
+    <a routerLink="/" 
+       class="nav-link" 
+       [class.active]="isActiveRoute('/')"
+       (click)="closeMenu()">Home</a>
+    <a routerLink="/cv" 
+       class="nav-link" 
+       [class.active]="isActiveRoute('/cv')"
+       (click)="closeMenu()">CV</a>
+    <a routerLink="/blog" 
+       class="nav-link" 
+       [class.active]="isActiveRoute('/blog')"
+       (click)="closeMenu()">Blog</a>
+  </nav>
+</header>

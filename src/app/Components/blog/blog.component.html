@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div class="blog-overview">
+  <h1>Blog</h1>
+  
+  <div *ngIf="loading" class="loading">
+    Loading blog posts...
+  </div>
+  
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+  
+  <div *ngIf="!loading && !error" class="blog-posts">
+    <article *ngFor="let post of blogPosts; let last = last" class="blog-post-item" [class.last]="last">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <p class="post-date">{{ post.date | date:'mediumDate' }}</p>
+      <p class="post-excerpt">{{ post.excerpt }}</p>
+      <a [routerLink]="['/blog', post.slug]" class="read-more">Read more →</a>
+    </article>
+  </div>
+</div>

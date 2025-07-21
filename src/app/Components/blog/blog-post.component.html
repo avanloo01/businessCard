@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="blog-post">
+  <div *ngIf="loading" class="loading">
+    Loading blog post...
+  </div>
+  
+  <div *ngIf="error" class="error">
+    {{ error }}
+    <a [routerLink]="['/blog']" class="back-link">← Back to Blog</a>
+  </div>
+  
+  <div *ngIf="!loading && !error && postMeta" class="blog-post-content">
+    <div class="post-header">
+      <h1 class="post-title">{{ postMeta.title }}</h1>
+      <p class="post-date">{{ postMeta.date | date:'mediumDate' }}</p>
+      <a [routerLink]="['/blog']" class="back-link">← Back to Blog</a>
+    </div>
+    
+    <div class="post-body">
+      <markdown [data]="postContent"></markdown>
+    </div>
+  </div>
+</div>
